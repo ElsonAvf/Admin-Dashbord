@@ -31,6 +31,10 @@ body {
   gap: 8px;
 }
 
+.mdi-menu:active {
+  background-color: rgba(0,0,0,.1);
+}
+
 #search {
   display: flex;
   justify-content: center;
@@ -172,10 +176,15 @@ p,
 }
 
 /*Aside*/
+#absoluteContainer.hidden {
+  display: none;
+}
+
 #absoluteContainer {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(0,0,0,.4);
 }
 
 .aside {
@@ -186,10 +195,6 @@ p,
   grid-template-rows: auto auto auto;
   align-content: start;
   justify-content: center;
-}
-
-.aside > * {
-  border: 1px solid red;
 }
 
 .aside,
