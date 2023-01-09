@@ -21,6 +21,12 @@ body {
   background-color: #fff;
 }
 
+img {
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
 /*Header*/
 .header {
   width: 100%;
@@ -31,14 +37,9 @@ body {
   gap: 8px;
 }
 
-.mdi-menu:active {
-  background-color: rgba(0,0,0,.1);
-}
-
 #search {
   display: flex;
   justify-content: center;
-  gap: 8px;
 }
 
 button[type="submit"] {
@@ -55,15 +56,9 @@ input[type="search"] {
   background-color: #d1d5db;
 }
 
-img {
-  width: 50px;
-  border-radius: 50px;
-  border: 1px solid black;
-}
-
 /*Navigation*/
 .nav {
-  padding: 2% 4%;
+  padding: 2%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -193,8 +188,8 @@ p,
   background-color: #0ea5e9;
   display: grid;
   grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
   align-content: start;
-  justify-content: center;
 }
 
 .aside,
@@ -202,12 +197,16 @@ p,
   color: white;
 }
 
+.dashboardIcon {
+  margin-top: 25px;
+}
+
 .dashboardIcon > span {
-  font-size: 48px;
+  font-size: 60px;
 }
 
 .dashboardIcon > div {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .icon {
@@ -222,6 +221,8 @@ p,
 }
 
 .adminOptions,.settings {
+  margin-left: 16px;
+  justify-self: start;
   display: grid;
   gap: 12px;
 }
