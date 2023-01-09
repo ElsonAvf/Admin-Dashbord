@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d1d5db;
+  font-weight: bold;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+
+.header, .nav,
+.cardsContainer > div,
+.trending, .announcements {
+  background-color: #fff;
+}
+
+/*Header*/
+.header {
+  width: 100%;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+#search {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+button[type="submit"] {
+  border: none;
+  background: none;
+}
+
+input[type="search"] {
+  max-width: 600px;
+  flex: 1;
+  border: none;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #d1d5db;
+}
+
+img {
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+/*Navigation*/
+.nav {
+  padding: 2% 4%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.nav > div:first-child {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav .buttons {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.nav button {
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+  background-color: #0ea5e9;
+  font-weight: bold;
+}
+
+/*Container*/
+.container {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.legenda {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.content {
+  width: clamp(300px, 75%, 75%);
+  flex-grow: 2;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 3% 97%;
+  overflow: hidden;
+}
+
+.section > div:first-child {
+  background-color: orange;
+  height: 100%;
+}
+
+.card { display: grid; }
+
+.options { place-self: end; }
+
+.card,.announcements,.trending {
+  padding: 20px 15px;
+}
+
+.announcements, .trending,
+.section {
+  border-radius: 8px;
+  box-shadow: 0px 3px 5px rgba(0,0,0,.3);
+}
+
+/*Right Sidebar*/
+.rightSidebar {
+  min-width: 220px;
+  flex: 1;
+}
+
+hr {
+  height: 1px;
+  background-color: rgba(0,0,0,0.3);
+  border: 0;
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trending > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+
+p,
+.description {
+  font-weight: 400;
+  opacity: .7;
+}
+
+/*Aside*/
+#absoluteContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.aside {
+  width: clamp(250px, 25%, 25%);
+  height: 100%;
+  background-color: #0ea5e9;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+  justify-content: center;
+}
+
+.aside > * {
+  border: 1px solid red;
+}
+
+.aside,
+.nav > div > button {
+  color: white;
+}
+
+.dashboardIcon > span {
+  font-size: 48px;
+}
+
+.dashboardIcon > div {
+  font-size: 24px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.adminOptions {
+  margin-bottom: 15%;
+  margin-top: 10%;
+}
+
+.adminOptions,.settings {
+  display: grid;
+  gap: 12px;
+}
+
+.mdi {
+  font-size: 24px;
+}
